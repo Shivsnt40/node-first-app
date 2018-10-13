@@ -10,6 +10,7 @@ mongoose.connect('mongodb://localhost/nodeapp', function (err) {
    if (err) throw err;
    console.log('Successfully connected');
 });
+app.use(express.static('./public'));
 app.use(cors())
 app.use(bodyParser.urlencoded({ //middleware to encode url params
 	extended: true
